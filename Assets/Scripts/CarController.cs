@@ -2,11 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum PLAYER_NUMBER {
+    ONE,
+    TWO
+}
+
 public class CarController : MonoBehaviour {
     private Vector3 movementDirection;
     private CarObjectManager objManager;
     //private Rigidbody rgd;
     private WeaponController weapon;
+
+    public PLAYER_NUMBER playerNumber;
 
 	// Use this for initialization
 	void Start () {

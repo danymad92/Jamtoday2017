@@ -25,7 +25,9 @@ public class InputManager : MonoBehaviour {
         } else if (Input.GetKeyDown(KeyCode.S)) {
             // Car1 Object
             car1.ReleaseObject();
-        } else if (Input.GetKey(KeyCode.LeftArrow)) {
+        }
+
+        if (Input.GetKey(KeyCode.LeftArrow)) {
             // Car2 Left
             car2.MoveTo(Vector3.left);
         } else if (Input.GetKey(KeyCode.RightArrow)) {

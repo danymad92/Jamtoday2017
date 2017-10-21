@@ -35,15 +35,15 @@ public class BoxGeneratorController : MonoBehaviour {
 		// init caminos
 		this.ultimoMomentoCreacion = Time.time;
 		this.posicionActualCamino = -1;
-		for (int i = 0; i < this.partesCamino.Length; i++) {
-			this.partesCamino[i].SetActive (false);
-		}
+		//for (int i = 0; i < this.partesCamino.Length; i++) {
+		//	this.partesCamino[i].SetActive (false);
+		//}
 
 		// init puentes
 		this.hayPuentes = this.partesPuente.Length > 0;
 		if (this.hayPuentes) {
-			this.duracionDelPuente = Time.time + (float) Random.Range (this.inicioEsperaPuente, this.finalEsperaPuente);
-			this.tiempoRestanteParaNuevoPuente = Time.time + (float) Random.Range (this.inicioTiempoPuente, this.finalTiempoPuente);
+			this.duracionDelPuente = Time.time + (float)Random.Range(this.inicioTiempoPuente, this.finalTiempoPuente);
+            this.tiempoRestanteParaNuevoPuente = Time.time + (float)Random.Range(this.inicioEsperaPuente, this.finalEsperaPuente);
 			this.posicionActualPuente = -1;
 			for (int i = 0; i < this.partesPuente.Length; i++) {
 				this.partesPuente [i].SetActive (false);
@@ -51,10 +51,6 @@ public class BoxGeneratorController : MonoBehaviour {
 		}
 	}
 
-	// Update is called once per frame
-	void Update () {
-		this.generar ();
-	}
 
 	private void generaPuente() {
 		this.posicionActualPuente++;
@@ -80,10 +76,10 @@ public class BoxGeneratorController : MonoBehaviour {
 		this.posicion.z += this.tamanoTerrenoZ;
 	}
 
-	private void generar() {
-		if (Time.time - this.ultimoMomentoCreacion < this.generarCadaSegundos) {
-			return;
-		}
+	public void generar() {
+		//if (Time.time - this.ultimoMomentoCreacion < this.generarCadaSegundos) {
+		//	return;
+		//}
 
 		if (!this.hayPuentes) {
 			this.generaCamino ();
@@ -108,4 +104,5 @@ public class BoxGeneratorController : MonoBehaviour {
 			}
 		}
 	}
+
 }
