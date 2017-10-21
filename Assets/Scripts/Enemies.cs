@@ -33,6 +33,7 @@ public class Enemies : MonoBehaviour {
 		enemy.transform.position = new Vector3 (-1000, -1000, -1000);
 		enemigos = new Pool<Enemy> (e.GetComponent<Enemy>());
 		enemigos.SetSize (20);
+        e.gameObject.SetActive(false);
 		StartCoroutine (createEnemyRuntime());
 
 	}

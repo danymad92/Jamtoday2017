@@ -19,6 +19,7 @@ public class CarController : MonoBehaviour {
 	void Start () {
         objManager = GetComponent<CarObjectManager>();
         movementDirection = Vector3.zero;
+        weapon = GetComponent<WeaponController>();
         //rgd = GetComponent<Rigidbody>();
 	}
 	

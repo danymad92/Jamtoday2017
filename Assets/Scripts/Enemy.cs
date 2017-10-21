@@ -40,11 +40,12 @@ public class Enemy : MonoBehaviour, IPooleableObject {
 	}
 
 	void OnCollisionEnter(Collision other) {
-
+        Debug.Log("Collision: " + other.gameObject.name);
 	}
 
     void OnTriggerEnter(Collider other) {
-        Debug.Log(other.gameObject.name);
+
+        Debug.Log("Collider: " + other.gameObject.name);
         if (other.CompareTag("EnemyDesactive")) {
             Debug.Log("Desactive");
             Enemies.enemigos.Release(this);
