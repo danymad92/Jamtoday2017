@@ -22,7 +22,17 @@ ModelImporter:
     4300002: Fence
     4300004: Fence
     9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tex_Fence
+    second: {fileID: 2100000, guid: 08029e47c457d4b41b4c4caf4a9d9aaf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tex_Ground
+    second: {fileID: 2100000, guid: 1545e9a75157a5047a5f264cb0d4694d, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -56,7 +66,7 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     importVisibility: 0
-    importBlendShapes: 1
+    importBlendShapes: 0
     importCameras: 0
     importLights: 0
     swapUVChannels: 0
@@ -64,16 +74,16 @@ ModelImporter:
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
-    weldVertices: 1
+    weldVertices: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 0
+    useFileScale: 1
   tangentSpace:
-    normalSmoothAngle: 60
-    normalImportMode: 0
-    tangentImportMode: 4
+    normalSmoothAngle: 89
+    normalImportMode: 1
+    tangentImportMode: 3
     normalCalculationMode: 0
   importAnimation: 1
   copyAvatar: 0

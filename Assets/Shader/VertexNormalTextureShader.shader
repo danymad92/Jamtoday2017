@@ -60,7 +60,7 @@ Properties{
                mul(float4(input.normal, 0.0), modelMatrixInverse).xyz);
  
             output.pos = UnityObjectToClipPos(input.vertex);
-			output.uv0 = input.uv0;
+			output.uv0 = TRANSFORM_TEX(input.uv0, _MainTexture);
             output.LMUV = input.LMUV;
             return output;
          }
