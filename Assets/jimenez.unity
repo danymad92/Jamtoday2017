@@ -238,7 +238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c764e1416a339a4e9b3e3b27952296c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
+  enemy: {fileID: 111844, guid: 532ee50e20554ae4d8287b34e4c6bcb6, type: 2}
   numeroCarriles: 0
 --- !u!4 &756836541
 Transform:
