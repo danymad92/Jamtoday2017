@@ -36,7 +36,7 @@ public class Enemy : MonoBehaviour, IPooleableObject {
 	/// </summary>
 	/// <returns> IPooleableObject to create </returns>
 	public IPooleableObject Generate() {
-		GameObject copy = Instantiate<GameObject>(this.gameObject, new Vector3(999999, 999999, 999999), Quaternion.identity);
+		GameObject copy = Instantiate<GameObject>(this.gameObject, new Vector3(999999, 999999, 999999), Quaternion.Euler(new Vector3(0, 180, 0)));
 		copy.SetActive(false);
 		return copy.GetComponent<Enemy>();
 	}

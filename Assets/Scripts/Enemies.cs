@@ -31,7 +31,8 @@ public class Enemies : MonoBehaviour {
 		this.anchoCarretera = 100;
 		this.anchoCarril = this.anchoCarretera / this.numeroCarriles;
 		this.largoTramoCarretera = 30;
-		GameObject e = (GameObject) Instantiate (Resources.Load("Prefabs/Enemy"));
+		GameObject e = (GameObject) Instantiate (enemy);
+		enemy.transform.position = new Vector3 (-1000, -1000, -1000);
 		enemigos = new Pool<Enemy> (e.GetComponent<Enemy>());
 		enemigos.SetSize (20);
 		StartCoroutine (createEnemyRuntime());
@@ -63,7 +64,7 @@ public class Enemies : MonoBehaviour {
 
 		Enemy enemigo = enemigos.Take ();
 		enemigo.gameObject.SetActive (true);
-		enemigo.gameObject.transform.SetPositionAndRotation (initialPosition, Quaternion.identity);
+		enemigo.gameObject.transform.SetPositionAndRotation (initialPosition, Quaternion.Euler(new Vector3(0, 180, 0)));
 		
 		//lastCreatedTime = Time.time;
 		Enemies.TotalCreated++;
