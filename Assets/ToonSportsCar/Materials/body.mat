@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: body
-  m_Shader: {fileID: 22, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 4800000, guid: 84480f118cd9dd848a8e16309439ace5, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -22,7 +22,15 @@ Material:
         m_Texture: {fileID: 8900000, guid: a8715f15076f74fb2a6c0ea2c80afbb8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _LightMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
+        m_Texture: {fileID: 2800000, guid: fff03460d8a314247bcc2f209c797351, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTexture:
         m_Texture: {fileID: 2800000, guid: fff03460d8a314247bcc2f209c797351, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -30,5 +38,6 @@ Material:
     - _Shininess: 0.15
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Light: {r: 0, g: 2, b: 0, a: 0}
     - _ReflectColor: {r: 0.28676468, g: 0.28676468, b: 0.28676468, a: 0.5019608}
     - _SpecColor: {r: 0.5147059, g: 0.7791076, b: 1, a: 1}

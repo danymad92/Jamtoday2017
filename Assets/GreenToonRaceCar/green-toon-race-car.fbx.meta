@@ -49,7 +49,27 @@ ModelImporter:
     4300012: LEFT_MIRROR
     4300014: RIGHT_MIRROR
     9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: body
+    second: {fileID: 2100000, guid: 5027510f61fa34483b821de1ac4300e1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: fce648afd8bd6454ba38aec4ad64918d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mirror
+    second: {fileID: 2100000, guid: 703badc3a1e834e8e99783f0e519c242, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wheel
+    second: {fileID: 2100000, guid: d52d7dbd347444faa8fd59e1a4535572, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -98,10 +118,10 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 0
   tangentSpace:
-    normalSmoothAngle: 60
-    normalImportMode: 0
-    tangentImportMode: 4
-    normalCalculationMode: 0
+    normalSmoothAngle: 5
+    normalImportMode: 1
+    tangentImportMode: 3
+    normalCalculationMode: 2
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
