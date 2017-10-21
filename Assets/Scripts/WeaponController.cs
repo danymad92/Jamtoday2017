@@ -12,18 +12,22 @@ public class WeaponController : MonoBehaviour {
 
     public int bulletNumber = 3;
 
+    private int shootedBulletsCnt;
     private Bullet bulletShooted;
 
     [HideInInspector]
     public CarController player;
+    public CarCanvasController carCanvas;
 
     private void Awake() {
         player = GetComponent<CarController>();
+        carCanvas = GetComponentInChildren<CarCanvasController>();
     }
 
     // Use this for initialization
     void Start () {
         available = false;
+        shootedBulletsCnt = 0;
 
         Bullet b = Instantiate(bulletPrefab, new Vector3(999999, 999999, 999999), Quaternion.identity).GetComponent<Bullet>();
 
@@ -32,13 +36,27 @@ public class WeaponController : MonoBehaviour {
         b.gameObject.SetActive(false);
 	}
 
+    public void ActivateWeapon() {
+        available = true;
+        shootedBulletsCnt = 0;
+    }
+
     public void Shoot() {
+        if (available) {
 
-        bulletShooted = bullets.Take();
-        bulletShooted.weaponController = this;
-        bulletShooted.transform.position = weaponTransform.position;
-        bulletShooted.gameObject.SetActive(true);
-        bulletShooted.rigBody.velocity = bulletShooted.gameObject.transform.forward * -bulletShooted.bulletSpeed;
+            bulletShooted = bullets.Take();
+            bulletShooted.weaponController = this;
+            bulletShooted.transform.position = weaponTransform.position;
+            bulletShooted.gameObject.SetActive(true);
+            bulletShooted.rigBody.velocity = bulletShooted.gameObject.transform.forward * -bulletShooted.bulletSpeed;
+            ++shootedBulletsCnt;
 
+            carCanvas.UpdateBulletCount(bulletNumber - shootedBulletsCnt, bulletNumber);
+
+            if (shootedBulletsCnt == bulletNumber) {
+                available = false;
+                shootedBulletsCnt = 0;
+            }
+        }
     }
 }
