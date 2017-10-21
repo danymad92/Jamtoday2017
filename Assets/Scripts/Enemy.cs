@@ -21,15 +21,6 @@ public class Enemy : MonoBehaviour, IPooleableObject {
 		this.GetComponent<MeshFilter>().mesh = obstaculos[Random.Range(0, obstaculos.Length)];
 		//this.gameObject = obstaculos[Random.Range(0, obstaculos.Length)];
 	}
-		
-	void Update()
-	{
-		player = GameObject.Find ("Cylinder");
-		float zPositionPLayer = player.transform.position.z;
-		if (zPositionPLayer > this.transform.position.z + 30) {
-			gameObject.SetActive (false);
-		}
-	}
 
 	/// <summary>
 	/// Generates an Enemy
@@ -48,12 +39,16 @@ public class Enemy : MonoBehaviour, IPooleableObject {
 		Destroy(this.gameObject);
 	}
 
-	void OnCollisionEnter(Collision enemyDesactive) {
-		Debug.Log (enemyDesactive.gameObject.name);
-		if (enemyDesactive.gameObject.CompareTag ("EnemyDesactive")) {
-			Debug.Log ("Desactive");
-			Enemies.enemigos.Release (this);
-			this.gameObject.SetActive (false);
-		}
+	void OnCollisionEnter(Collision other) {
+
 	}
+
+    void OnTriggerEnter(Collider other) {
+        Debug.Log(other.gameObject.name);
+        if (other.CompareTag("EnemyDesactive")) {
+            Debug.Log("Desactive");
+            Enemies.enemigos.Release(this);
+            this.gameObject.SetActive(false);
+        }
+    }
 }

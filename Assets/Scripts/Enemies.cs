@@ -15,22 +15,20 @@ public class Enemies : MonoBehaviour {
 
 	public int numeroCarriles;
 
-	private float anchoCarretera;
+	public float anchoCarretera = 6;
 
 	private float anchoCarril;
 
-	private float largoTramoCarretera;
+	public float largoTramoCarretera = 8;
 
 	private float lastCreatedTime;
 
-
+    public GameObject player;
 
 	void Start()
 	{
-		this.numeroCarriles = 5;
-		this.anchoCarretera = 100;
+
 		this.anchoCarril = this.anchoCarretera / this.numeroCarriles;
-		this.largoTramoCarretera = 30;
 		GameObject e = (GameObject) Instantiate (enemy);
 		enemy.transform.position = new Vector3 (-1000, -1000, -1000);
 		enemigos = new Pool<Enemy> (e.GetComponent<Enemy>());
@@ -57,9 +55,9 @@ public class Enemies : MonoBehaviour {
 		
 	public void CreateEnemy()
 	{
-		GameObject player = GameObject.Find ("Cylinder");
-		Vector3 initialPosition = new Vector3(Random.Range(- this.numeroCarriles / 2, this.numeroCarriles / 2) * 
-			Random.Range(- this.anchoCarril / 2, this.anchoCarril / 2), 0, Random.Range(player.transform.position.z +30 ,
+		
+		Vector3 initialPosition = new Vector3(Random.Range(- this.numeroCarriles * 0.5f, this.numeroCarriles * 0.5f) * 
+			Random.Range(- this.anchoCarril * 0.5f, this.anchoCarril * 0.5f), 0, Random.Range(player.transform.position.z +30 ,
 				player.transform.position.z + this.largoTramoCarretera +30));
 
 		Enemy enemigo = enemigos.Take ();
