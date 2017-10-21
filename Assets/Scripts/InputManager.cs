@@ -5,14 +5,10 @@ using UnityEngine;
 public class InputManager : MonoBehaviour {
     public CarController car1;
     public CarController car2;
-
-	// Use this for initialization
-	void Start () {
-		
-	}
 	
 	// Update is called once per frame
 	void Update () {
+        // Car 1
         if (Input.GetKey(KeyCode.A)) {
             // Car1 Left
             car1.MoveTo(Vector3.left);
@@ -26,7 +22,7 @@ public class InputManager : MonoBehaviour {
             // Car1 Object
             car1.ReleaseObject();
         }
-
+        // Car 2
         if (Input.GetKey(KeyCode.LeftArrow)) {
             // Car2 Left
             car2.MoveTo(Vector3.left);
@@ -40,5 +36,11 @@ public class InputManager : MonoBehaviour {
             // Car2 Object
             car2.ReleaseObject();
         }
+        // Pause
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            PauseController.PauseGame();
+        }
     }
+
+
 }

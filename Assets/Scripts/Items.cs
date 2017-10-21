@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using FreakPool;
 
-public class Enemies : MonoBehaviour {
+public class Items : MonoBehaviour {
 
 	public static int TotalCreated;
 
-	public static Pool<Enemy> enemigos;
+	public static Pool<Item> items;
 
-	public GameObject enemy;
+	public GameObject item;
 
 	public static int TotalDestroyed;
 
@@ -18,6 +18,8 @@ public class Enemies : MonoBehaviour {
 	public float anchoCarretera = 6;
 
 	private float anchoCarril;
+
+	private float centroCarrilIzquierda;
 
 	public float largoTramoCarretera = 8;
 
@@ -29,37 +31,35 @@ public class Enemies : MonoBehaviour {
 	{
 
 		this.anchoCarril = this.anchoCarretera / this.numeroCarriles;
-		GameObject e = (GameObject) Instantiate (enemy);
-		enemy.transform.position = new Vector3 (-1000, -1000, -1000);
-		enemigos = new Pool<Enemy> (e.GetComponent<Enemy>());
-		enemigos.SetSize (20);
-        e.gameObject.SetActive(false);
-		StartCoroutine (createEnemyRuntime());
+		GameObject e = (GameObject) Instantiate (this.item);
+		item.transform.position = new Vector3 (-1000, -1000, -1000);
+		items = new Pool<Item> (e.GetComponent<Item>());
+		items.SetSize (20);
+		StartCoroutine (createItemRuntime());
 
 	}
 
-	public IEnumerator createEnemyRuntime() {
+	public IEnumerator createItemRuntime() {
 		while (true) {
-			this.CreateEnemy ();
+			this.CreateItem ();
 			yield return new WaitForSeconds (2.5f);
 		}
 	}
 		
-	public void CreateEnemy()
+	public void CreateItem()
 	{
-		
 		int carril = Random.Range (-1, 2);
 		Vector3 initialPosition = new Vector3(
 			carril * this.anchoCarril, 
 			0, 
 			Random.Range(player.transform.position.z +30, player.transform.position.z + this.largoTramoCarretera +30));
 
-		Enemy enemigo = enemigos.Take ();
-		enemigo.gameObject.SetActive (true);
-		enemigo.gameObject.transform.SetPositionAndRotation (initialPosition, Quaternion.Euler(new Vector3(0, 180, 0)));
+		Item item = items.Take ();
+		item.gameObject.SetActive (true);
+		item.gameObject.transform.SetPositionAndRotation (initialPosition, Quaternion.Euler(new Vector3(-90, 0, 0)));
 		
 		//lastCreatedTime = Time.time;
-		Enemies.TotalCreated++;
+		Items.TotalCreated++;
 	}
 
 
