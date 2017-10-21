@@ -15,6 +15,8 @@ public class CarController : MonoBehaviour {
 
     public PLAYER_NUMBER playerNumber;
 
+    public AudioSource shootSound;
+
 	// Use this for initialization
 	void Start () {
         objManager = GetComponent<CarObjectManager>();

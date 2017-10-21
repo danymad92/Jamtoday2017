@@ -46,14 +46,16 @@ public class Bullet : MonoBehaviour, IPooleableObject {
     private void OnTriggerEnter(Collider other) {
 
         if (other.CompareTag("Enemy")) {
+            SoundManager.instance.fence.Play();
             other.gameObject.SetActive(false);
             weaponController.bullets.Release(this);
             gameObject.SetActive(false);
         } else if (other.CompareTag("Barrel")) {
-
+            SoundManager.instance.barrel.Play();
         } else if (other.CompareTag("Player")) {
             if (!other.gameObject.GetComponent<CarController>().playerNumber.Equals(weaponController.player.playerNumber)) {
                 gameObject.SetActive(false);
+                SoundManager.instance.player.Play();
             }
         }
 

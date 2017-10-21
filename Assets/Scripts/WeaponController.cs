@@ -17,6 +17,7 @@ public class WeaponController : MonoBehaviour {
 
     [HideInInspector]
     public CarController player;
+    [HideInInspector]
     public CarCanvasController carCanvas;
 
     private void Awake() {
@@ -50,6 +51,8 @@ public class WeaponController : MonoBehaviour {
             bulletShooted.gameObject.SetActive(true);
             bulletShooted.rigBody.velocity = bulletShooted.gameObject.transform.forward * -bulletShooted.bulletSpeed;
             ++shootedBulletsCnt;
+
+            player.shootSound.Play();
 
             carCanvas.UpdateBulletCount(bulletNumber - shootedBulletsCnt, bulletNumber);
 
