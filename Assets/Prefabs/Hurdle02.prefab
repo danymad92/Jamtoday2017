@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2374218}
   - component: {fileID: 114144461944809916}
   - component: {fileID: 6507568}
-  - component: {fileID: 114957435362030152}
   m_Layer: 0
   m_Name: Hurdle02
   m_TagString: Enemy
@@ -111,14 +110,3 @@ MonoBehaviour:
   obstaculos: []
   player: {fileID: 0}
   positionArrayEnemies: 0
---- !u!114 &114957435362030152
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 174218}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00dc181fa241b0c4f9d8e44e70f9b154, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

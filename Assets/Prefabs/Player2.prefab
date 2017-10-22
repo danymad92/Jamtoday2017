@@ -358,6 +358,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4258453517600428}
+  - component: {fileID: 95460252504033128}
   m_Layer: 0
   m_Name: GreenCar
   m_TagString: Untagged
@@ -442,7 +443,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1233563242250330}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.46801227, y: 0.45204073, z: -0.42753074}
+  m_LocalPosition: {x: 0.4680123, y: 0.45204073, z: -0.4275307}
   m_LocalScale: {x: 0.016420502, y: 0.016420502, z: 0.016420502}
   m_Children: []
   m_Father: {fileID: 4258453517600428}
@@ -520,7 +521,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1201235440548856}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.66432834, y: 0.43012828, z: 0.32969618}
+  m_LocalPosition: {x: -0.6643283, y: 0.43012828, z: 0.3296962}
   m_LocalScale: {x: 0.05317494, y: 0.05317494, z: 0.033972878}
   m_Children: []
   m_Father: {fileID: 4258453517600428}
@@ -546,7 +547,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1543080319300428}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.65735507, y: 0.43012828, z: 0.32969618}
+  m_LocalPosition: {x: 0.6573551, y: 0.43012828, z: 0.3296962}
   m_LocalScale: {x: -0.0532, y: 0.05317494, z: 0.033972878}
   m_Children: []
   m_Father: {fileID: 4258453517600428}
@@ -1081,6 +1082,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!95 &95460252504033128
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1909185214786764}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 66acaaff615527548889d06faa66c093, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114061966921043544
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1344,6 +1362,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerNumber: 1
   shootSound: {fileID: 82488198888685372}
+  animator: {fileID: 95460252504033128}
 --- !u!114 &114767955314041744
 MonoBehaviour:
   m_ObjectHideFlags: 1

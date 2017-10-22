@@ -5,9 +5,15 @@ using UnityEngine;
 public class InputManager : MonoBehaviour {
     public CarController car1;
     public CarController car2;
-	
-	// Update is called once per frame
-	void Update () {
+
+    public CurvesController curves;
+
+    private void Start() {
+        curves.EnableCurves();
+    }
+
+    // Update is called once per frame
+    void Update () {
         // Car 1
         if (Input.GetKey(KeyCode.A)) {
             // Car1 Left
@@ -21,7 +27,11 @@ public class InputManager : MonoBehaviour {
         } else if (Input.GetKeyDown(KeyCode.S)) {
             // Car1 Object
             car1.ReleaseObject();
+        } else if (Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.A)) {
+            Debug.Log("aaaa");
+            car1.MoveTo(Vector3.zero);
         }
+
         // Car 2
         if (Input.GetKey(KeyCode.LeftArrow)) {
             // Car2 Left
@@ -35,7 +45,10 @@ public class InputManager : MonoBehaviour {
         } else if (Input.GetKeyDown(KeyCode.DownArrow)) {
             // Car2 Object
             car2.ReleaseObject();
+        } else if (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.LeftArrow)) {
+            car2.MoveTo(Vector3.zero);
         }
+
         // Pause
         if (Input.GetKeyDown(KeyCode.Escape)) {
             PauseController.PauseGame();

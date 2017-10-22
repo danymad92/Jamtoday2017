@@ -226,6 +226,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4090613734724614}
+  - component: {fileID: 95580632744441376}
   m_Layer: 0
   m_Name: BlueCar
   m_TagString: Untagged
@@ -453,7 +454,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1900432083793456}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 4090613734724614}
@@ -907,6 +908,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!95 &95580632744441376
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1632842538648386}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8981bea35cda4bb47bf34dce658a4d65, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114031764324453926
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1297,6 +1315,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerNumber: 0
   shootSound: {fileID: 82871555202671544}
+  animator: {fileID: 95580632744441376}
 --- !u!124 &124225735220057028
 Behaviour:
   m_ObjectHideFlags: 1
