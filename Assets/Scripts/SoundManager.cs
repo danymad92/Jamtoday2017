@@ -10,6 +10,7 @@ public class SoundManager : MonoBehaviour {
     public AudioSource player;
     public AudioSource carHit;
     public AudioSource shoot;
+    public AudioSource coins;
 
     public static SoundManager instance;
 

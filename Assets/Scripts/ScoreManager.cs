@@ -3,14 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ScoreManager : MonoBehaviour {
+    public static ScoreManager instance;
     public static bool game;
     public int pointsPerSecond;
+    public CarCanvasController canvasP1;
+    public CarCanvasController canvasP2;
 
-	public static int score;
+    public static int score;
 
 	private static int items;
-	// Use this for initialization
-	void Start () {
+
+    void Awake() {
+        instance = this;
+    }
+
+    // Use this for initialization
+    void Start () {
         game = true;
         score = 0;
         StartCoroutine(ScoreControl());
@@ -41,10 +49,13 @@ public class ScoreManager : MonoBehaviour {
 	public static void addItem() {
 		if (ScoreManager.items < 3) {
 			++ScoreManager.items;
+            if (items == 3) {
+                instance.canvasP1.PrepareWeapon();
+            }
 		}
 	}
 
 	public static bool canCreateArma() {
-		return ScoreManager.items >= 3;
+		return (ScoreManager.items >= 3) && (CarCanvasController.weaponReady);
 	}
 }

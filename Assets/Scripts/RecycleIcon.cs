@@ -12,12 +12,7 @@ public class RecycleIcon : MonoBehaviour {
         rectTrf = GetComponent<RectTransform>();
     }
 
-    void OnEnable() {
-        //rectTrf.rotation = Quaternion.Euler(0, 0, 0);
+    void Update() {
+        rectTrf.Rotate(0, 0, speedRotation);
     }
-	
-	// Update is called once per frame
-	//void Update () {
- //       rectTrf.rotation = Quaternion.Euler(0, 0, rectTrf.rotation.z + speedRotation * Time.deltaTime);
-	//}
 }
