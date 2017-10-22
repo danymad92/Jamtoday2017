@@ -108,10 +108,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
-  - {fileID: 4300000, guid: de32a7368f7dfb543b7be3010d09e8ca, type: 3}
-  - {fileID: 4300000, guid: c508bee724909024ebabc106ffc525ee, type: 3}
   - {fileID: 4300000, guid: eef823a0d743d8942b54d878cc992b37, type: 3}
+  - {fileID: 4300000, guid: bfe4bd7ca2c7a254dbc9bcd23bb71cbe, type: 3}
   materials:
-  - {fileID: 2100000, guid: 32c09e8c44144b34db6c60e3dc8d4d5b, type: 2}
-  - {fileID: 2100000, guid: 8324fcbc6a22e904cba4b40fb1d191a0, type: 2}
   - {fileID: 2100000, guid: c33ab57e21eb3c34385d8e9e020832ed, type: 2}
+  - {fileID: 2100000, guid: 848918a99d11f25f110026ca44295342, type: 2}
