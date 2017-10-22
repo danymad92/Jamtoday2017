@@ -7,11 +7,14 @@ public class ScoreManager : MonoBehaviour {
     public int pointsPerSecond;
 
     private int score;
+
+	private static int items;
 	// Use this for initialization
 	void Start () {
         game = true;
         score = 0;
         StartCoroutine(ScoreControl());
+		ScoreManager.items = 0;
     }
 
 	public IEnumerator ScoreControl () {
@@ -21,5 +24,27 @@ public class ScoreManager : MonoBehaviour {
             MainCanvasController.SetScore(score);
             yield return wfs;
         }
+	}
+
+	public static int getItems() {
+		return ScoreManager.items;
+	}
+
+	public static void setItems(int items) {
+		ScoreManager.items = items;
+	}
+
+	public static void resetItem() {
+		ScoreManager.items = 0;
+	}
+
+	public static void addItem() {
+		if (ScoreManager.items < 3) {
+			++ScoreManager.items;
+		}
+	}
+
+	public static bool canCreateArma() {
+		return ScoreManager.items >= 3;
 	}
 }

@@ -41,14 +41,21 @@ public class Enemy : MonoBehaviour, IPooleableObject {
 
 	void OnCollisionEnter(Collision other) {
         Debug.Log("Collision: " + other.gameObject.name);
+		if (other.gameObject.CompareTag ("Player")) {
+			Debug.Log ("Timescale = 0");
+			Time.timeScale = 0;
+		}
 	}
 
     void OnTriggerEnter(Collider other) {
 
         Debug.Log("Collider: " + other.gameObject.name);
-        if (other.CompareTag("EnemyDesactive")) {
-            Enemies.enemigos.Release(this);
-            this.gameObject.SetActive(false);
-        }
+		if (other.CompareTag ("EnemyDesactive")) {
+			Enemies.enemigos.Release (this);
+			this.gameObject.SetActive (false);
+		} else if (other.CompareTag ("Item")) {
+			other.transform.position = this.transform.GetChild (0).position;
+			Debug.Log ("Colisión item con valla");
+		}
     }
 }
