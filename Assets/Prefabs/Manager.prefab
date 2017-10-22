@@ -57,6 +57,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   car1: {fileID: 0}
   car2: {fileID: 0}
+  curves: {fileID: 0}
 --- !u!114 &114692327663451172
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -81,6 +82,12 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   generarCadaSegundos: 2.5
   posicion: {x: 0, y: 0, z: 40}
   tamanoTerrenoZ: 8
@@ -99,8 +106,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c994c4c56c76da74b849e382e7be16f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeedValue: 3
-  advanceSpeedValue: 3
+  movementSpeedValue: 6
+  advanceSpeedValue: 10
 --- !u!114 &114778897037674786
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -112,8 +119,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fae8f776639cac140a34dddc5ba41f91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  game: 1
   pointsPerSecond: 5
+  canvasP1: {fileID: 0}
+  canvasP2: {fileID: 0}
 --- !u!114 &114790241114589498
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -126,6 +134,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trees:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

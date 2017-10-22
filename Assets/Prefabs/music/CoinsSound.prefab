@@ -9,31 +9,30 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1358579998155400}
+  m_RootGameObject: {fileID: 1198006415056100}
   m_IsPrefabParent: 1
---- !u!1 &1358579998155400
+--- !u!1 &1198006415056100
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4832262148584244}
-  - component: {fileID: 114830096250212436}
-  - component: {fileID: 82817986532540478}
+  - component: {fileID: 4545958499640208}
+  - component: {fileID: 82743345222882638}
   m_Layer: 0
-  m_Name: SoundManager
+  m_Name: CoinsSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4832262148584244
+--- !u!4 &4545958499640208
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1358579998155400}
+  m_GameObject: {fileID: 1198006415056100}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -41,20 +40,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &82817986532540478
+--- !u!82 &82743345222882638
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1358579998155400}
+  m_GameObject: {fileID: 1198006415056100}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e9b125e5f052ec84fa9c6a3f72248b27, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 11e7aa6f5a1347f47b87aa7b91b15b1c, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -121,21 +120,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &114830096250212436
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1358579998155400}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: caca19a858f094c448c3839d5c677170, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  engine: {fileID: 82817986532540478}
-  fence: {fileID: 0}
-  barrel: {fileID: 0}
-  player: {fileID: 0}
-  carHit: {fileID: 0}
-  shoot: {fileID: 0}
-  coins: {fileID: 0}
