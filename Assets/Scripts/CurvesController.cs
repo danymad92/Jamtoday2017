@@ -56,19 +56,24 @@ public class CurvesController : MonoBehaviour {
 				//Si el juego está parado
 
 				if ((Mathf.Abs (offset.x - (maxOffsetX * dir)) < 5.0f) &&
-				(UnityEngine.Random.Range(0.0f,100.0f) < changeOffsetXOdds)) {
-					dir = UnityEngine.Random.Range (-1.0f, 2.0f);//-1,0,1
+				( UnityEngine.Random.Range(0.0f,100.0f) < changeOffsetXOdds)) {
+					dir = UnityEngine.Random.Range (-2.0f, 2.0f);//-1,0,1
 				}
 
 				// Update curve towards direction
 				float newDir = maxOffsetX * dir;
 				if (offset.x + deltaCurve < newDir) {
+                    Debug.Log("Abajo");
 					offset.x += deltaCurve;
                     offset.y -= deltaCurve;
 				} else if (offset.x - deltaCurve > newDir) {
-					offset.x -= deltaCurve;
+                    Debug.Log("Arriba");
+                    offset.x -= deltaCurve;
                     offset.y += deltaCurve;
-                }
+                    if (offset.y >= 0) {
+                            offset.y = 0;
+                        }
+                    }
 
 				if (Time.time - updateTime > 0.1f) {
 
