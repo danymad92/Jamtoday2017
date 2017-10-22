@@ -1162,7 +1162,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 7fd1d2991281498409d53eb78ccb6e26, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b167851d0f5f5f34e81073858c18050d, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1210,6 +1210,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trashCounterFill: {fileID: 114367933772155976}
   bulletCounterFill: {fileID: 114143173736378920}
+  recycleIcon: {fileID: 1954421011074684}
+  weaponIcon: {fileID: 1829169229615248}
 --- !u!114 &114715961244933556
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1365,7 +1367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3f6ddb135e9fc84a8d2a928239bfd8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedRotation: 100
+  speedRotation: -6
 --- !u!114 &114936723902651388
 MonoBehaviour:
   m_ObjectHideFlags: 1
