@@ -12,8 +12,11 @@ public class CarController : MonoBehaviour {
     private CarObjectManager objManager;
     //private Rigidbody rgd;
     private WeaponController weapon;
+	private CarCanvasController carCanvasController;
+	private int totalItem;
 
     public PLAYER_NUMBER playerNumber;
+	public bool firstPosition;
 
     public AudioSource shootSound;
 
@@ -28,6 +31,10 @@ public class CarController : MonoBehaviour {
         movementDirection = Vector3.zero;
         weapon = GetComponent<WeaponController>();
         //rgd = GetComponent<Rigidbody>();
+		carCanvasController = GetComponentInChildren<CarCanvasController> ();
+		carCanvasController.DeactivateBulletCount ();
+		carCanvasController.ActivateTrashCount ();
+		totalItem = 3;
 	}
 	
     public void ReleaseObject() {
@@ -61,7 +68,9 @@ public class CarController : MonoBehaviour {
     }
 
     public void Shoot() {
-        weapon.Shoot();
+		if (!weapon.Shoot ()) {
+			carCanvasController.DeactivateBulletCount ();
+		}
     }
     
     private void FixedUpdate() {
@@ -76,4 +85,28 @@ public class CarController : MonoBehaviour {
         transform.position += ((movementDirection * CarManager.movementSpeed) + (Vector3.forward * CarManager.forwardSpeed)) * Time.fixedDeltaTime;
         movementDirection = Vector3.zero;
     }
+
+	public void setFirstPosition(bool isFirstPosition) {
+		this.firstPosition = isFirstPosition;
+	}
+
+	public bool isFirstPosition() {
+		return this.firstPosition;
+	}
+
+	void OnCollisionEnter(Collision other) {
+		if (other.gameObject.CompareTag ("Item")) {
+			other.gameObject.SetActive (false);
+			if (this.isFirstPosition ()) {
+				ScoreManager.addItem ();
+				carCanvasController.UpdateTrashCount (ScoreManager.getItems (), totalItem);
+			}
+		} else if (other.gameObject.CompareTag ("Weapon")) {
+			if (!this.isFirstPosition ()) {
+				other.gameObject.SetActive (false);
+				carCanvasController.ActivateBulletCount ();
+				this.weapon.ActivateWeapon();
+			}
+		}
+	}
 }

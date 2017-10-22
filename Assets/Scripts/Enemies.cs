@@ -21,6 +21,8 @@ public class Enemies : MonoBehaviour {
 
 	public float largoTramoCarretera = 8;
 
+    public float secondEnemyProb = 0.80f;
+
 	private float lastCreatedTime;
 
     public GameObject player;
@@ -40,15 +42,29 @@ public class Enemies : MonoBehaviour {
 
 	public IEnumerator createEnemyRuntime() {
 		while (true) {
-			this.CreateEnemy ();
-			yield return new WaitForSeconds (2.5f);
+            int carril = Random.Range(-1, 2);
+            this.CreateEnemy (carril);
+            // Intenta crear un segundo obstáculo
+            if (Random.Range(0.0f, 1.0f) >= secondEnemyProb) {
+                switch (carril) {
+                    case -1:
+                        carril = Random.Range(0, 2);
+                        break;
+                    case 0:
+                        carril = -1;
+                        break;
+                    case 1:
+                        carril = Random.Range(-1, 1);
+                        break;
+                }
+                CreateEnemy(carril);
+            }
+            yield return new WaitForSeconds (20.0f / CarManager.forwardSpeed);
 		}
 	}
 		
-	public void CreateEnemy()
+	public void CreateEnemy(int carril)
 	{
-		
-		int carril = Random.Range (-1, 2);
 		Vector3 initialPosition = new Vector3(
 			carril * this.anchoCarril, 
 			0, 
@@ -57,10 +73,10 @@ public class Enemies : MonoBehaviour {
 		Enemy enemigo = enemigos.Take ();
 		enemigo.gameObject.SetActive (true);
 		enemigo.gameObject.transform.SetPositionAndRotation (initialPosition, Quaternion.Euler(new Vector3(0, 180, 0)));
-		
-		//lastCreatedTime = Time.time;
-		Enemies.TotalCreated++;
-	}
+
+        //lastCreatedTime = Time.time;
+        Enemies.TotalCreated++;
+    }
 
 
 }

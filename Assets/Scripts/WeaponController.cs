@@ -42,7 +42,7 @@ public class WeaponController : MonoBehaviour {
         shootedBulletsCnt = 0;
     }
 
-    public void Shoot() {
+    public bool Shoot() {
         if (available) {
 
             bulletShooted = bullets.Take();
@@ -52,7 +52,8 @@ public class WeaponController : MonoBehaviour {
             bulletShooted.rigBody.velocity = bulletShooted.gameObject.transform.forward * -bulletShooted.bulletSpeed;
             ++shootedBulletsCnt;
 
-            player.shootSound.Play();
+            //player.shootSound.Play();
+            SoundManager.instance.shoot.Play();
 
             carCanvas.UpdateBulletCount(bulletNumber - shootedBulletsCnt, bulletNumber);
 
@@ -61,5 +62,7 @@ public class WeaponController : MonoBehaviour {
                 shootedBulletsCnt = 0;
             }
         }
+
+		return available;
     }
 }

@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - Barrel
   - Item
+  - Tree
+  - Weapon
   layers:
   - Default
   - TransparentFX

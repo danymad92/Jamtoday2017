@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ScoreManager : MonoBehaviour {
-    public bool game;
+    public static bool game;
     public int pointsPerSecond;
 
     private int score;

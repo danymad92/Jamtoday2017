@@ -8,6 +8,8 @@ public class SoundManager : MonoBehaviour {
     public AudioSource fence;
     public AudioSource barrel;
     public AudioSource player;
+    public AudioSource carHit;
+    public AudioSource shoot;
 
     public static SoundManager instance;
 

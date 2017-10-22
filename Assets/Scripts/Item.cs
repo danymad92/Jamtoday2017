@@ -8,12 +8,14 @@ public class Item : MonoBehaviour, IPooleableObject {
 	//public GameObject[] obstaculos;
 
 	public Mesh[] items;
-
+	public Material[] materials;
 	//public GameObject obstaculo;
 
 	void Start()
 	{
-		this.GetComponent<MeshFilter>().mesh = items[Random.Range(0, items.Length)];
+		int value = Random.Range (0, items.Length);
+		this.GetComponent<MeshFilter>().mesh = items[value];
+		this.GetComponent<MeshRenderer>().material = materials[value];
 		//this.gameObject = obstaculos[Random.Range(0, obstaculos.Length)];
 	}
 
@@ -35,7 +37,6 @@ public class Item : MonoBehaviour, IPooleableObject {
 	}
 
     void OnTriggerEnter(Collider other) {
-        Debug.Log(other.gameObject.name);
         if (other.CompareTag("EnemyDesactive")) {
 			Items.items.Release(this);
             this.gameObject.SetActive(false);

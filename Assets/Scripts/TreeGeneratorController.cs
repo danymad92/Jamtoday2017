@@ -81,36 +81,36 @@ public class TreeGeneratorController : MonoBehaviour {
         if (!trees[treeIndex].activeSelf) {
             trees[treeIndex].SetActive(true);
             trees[treeIndex].transform.position = this.posicion;
-            posicion.z += this.tamanoTerrenoZ;
         }
+        posicion.z += this.tamanoTerrenoZ;
 
 
-		//if (Time.time - this.ultimoMomentoCreacion < this.generarCadaSegundos) {
-		//	return;
-		//}
+        //if (Time.time - this.ultimoMomentoCreacion < this.generarCadaSegundos) {
+        //	return;
+        //}
 
-		//if (!this.hayPuentes) {
-		//	this.generaCamino ();
-		//	return;
-		//}
+        //if (!this.hayPuentes) {
+        //	this.generaCamino ();
+        //	return;
+        //}
 
-		// verificamos que tenemos que mostrar
+        // verificamos que tenemos que mostrar
 
-		//if (this.mostrandoPuente) {
-		//	this.generaPuente ();
+        //if (this.mostrandoPuente) {
+        //	this.generaPuente ();
 
-		//	if (Time.time >= this.duracionDelPuente) {
-		//		this.mostrandoPuente = false;
-		//		this.tiempoRestanteParaNuevoPuente = Time.time + (float) Random.Range (this.inicioEsperaPuente, this.finalEsperaPuente);
-		//	}
-		//} else {
-		//	this.generaCamino ();
+        //	if (Time.time >= this.duracionDelPuente) {
+        //		this.mostrandoPuente = false;
+        //		this.tiempoRestanteParaNuevoPuente = Time.time + (float) Random.Range (this.inicioEsperaPuente, this.finalEsperaPuente);
+        //	}
+        //} else {
+        //	this.generaCamino ();
 
-		//	if (Time.time >= this.tiempoRestanteParaNuevoPuente) {
-		//		this.mostrandoPuente = true;
-		//		this.duracionDelPuente = Time.time + (float) Random.Range (this.inicioTiempoPuente, this.finalTiempoPuente);
-		//	}
-		//}
-	}
+        //	if (Time.time >= this.tiempoRestanteParaNuevoPuente) {
+        //		this.mostrandoPuente = true;
+        //		this.duracionDelPuente = Time.time + (float) Random.Range (this.inicioTiempoPuente, this.finalTiempoPuente);
+        //	}
+        //}
+    }
 
 }

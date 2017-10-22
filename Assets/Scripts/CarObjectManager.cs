@@ -16,6 +16,8 @@ public class CarObjectManager : MonoBehaviour {
 
 	private void crearArma() {
 		if (ScoreManager.canCreateArma ()) {
+			CarCanvasController carCanvasController = GetComponentInChildren<CarCanvasController> ();
+			carCanvasController.ActivateTrashCount ();
 			ScoreManager.resetItem ();
 			GameObject e = (GameObject)Instantiate (objectPrefab);
 			e.transform.position = this.objectTransform.position;
