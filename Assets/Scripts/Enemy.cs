@@ -44,6 +44,10 @@ public class Enemy : MonoBehaviour, IPooleableObject {
 		if (other.gameObject.CompareTag ("Player")) {
 			Debug.Log ("Timescale = 0");
 			Time.timeScale = 0;
+            ScoreManager.game = false;
+            // TODO Mostrar menú final de partida
+            SoundManager.instance.engine.Stop();
+            SoundManager.instance.carHit.Play();
 		}
 	}
 

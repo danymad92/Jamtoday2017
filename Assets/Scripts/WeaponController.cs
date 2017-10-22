@@ -52,7 +52,8 @@ public class WeaponController : MonoBehaviour {
             bulletShooted.rigBody.velocity = bulletShooted.gameObject.transform.forward * -bulletShooted.bulletSpeed;
             ++shootedBulletsCnt;
 
-            player.shootSound.Play();
+            //player.shootSound.Play();
+            SoundManager.instance.shoot.Play();
 
             carCanvas.UpdateBulletCount(bulletNumber - shootedBulletsCnt, bulletNumber);
 
