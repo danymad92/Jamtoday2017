@@ -47,6 +47,7 @@ public class Enemy : MonoBehaviour, IPooleableObject {
             // TODO Mostrar menú final de partida
             SoundManager.instance.engine.Stop();
             SoundManager.instance.carHit.Play();
+			EndGameCanvasController._instance.SetActive (true);
 		}
 	}
 
@@ -57,7 +58,7 @@ public class Enemy : MonoBehaviour, IPooleableObject {
 			Enemies.enemigos.Release (this);
 			this.gameObject.SetActive (false);
 		} else if (other.CompareTag ("Item")) {
-			other.transform.position = this.transform.GetChild (0).position;
+			//other.transform.position = this.transform.GetChild (0).position;
 			Debug.Log ("Colisión item con valla");
 		}
     }
