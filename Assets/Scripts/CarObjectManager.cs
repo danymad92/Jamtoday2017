@@ -5,13 +5,24 @@ using UnityEngine;
 public class CarObjectManager : MonoBehaviour {
     public Transform objectTransform;
     public GameObject objectPrefab;
+	public GameObject arma;
+
+	public Transform childArmaPosition;
 
 
 	public bool IsObjectReady() {
-        return false;
+		return arma != null;
     }
 
     public void ReleaseObject() {
-        Instantiate(objectPrefab, objectTransform.position, Quaternion.identity);
+		this.crearArma ();
     }
+
+	private void crearArma() {
+		if (ScoreManager.canCreateArma ()) {
+			ScoreManager.resetItem ();
+			GameObject e = (GameObject)Instantiate (arma);
+			e.transform.position = this.childArmaPosition.position;
+		}
+	}
 }

@@ -7,6 +7,7 @@ TagManager:
   - EnemyDesactive
   - Enemy
   - Barrel
+  - Item
   layers:
   - Default
   - TransparentFX

@@ -15,6 +15,8 @@ public class CarController : MonoBehaviour {
 
     public PLAYER_NUMBER playerNumber;
 
+	public bool firstPosition;
+
 	// Use this for initialization
 	void Start () {
         objManager = GetComponent<CarObjectManager>();
@@ -24,7 +26,7 @@ public class CarController : MonoBehaviour {
 	}
 	
     public void ReleaseObject() {
-        if (objManager.IsObjectReady()) {
+		if (objManager.IsObjectReady()) {
             objManager.ReleaseObject();
         }
     }
@@ -37,9 +39,27 @@ public class CarController : MonoBehaviour {
         weapon.Shoot();
     }
 
+	public void setFirstPosition(bool isFirstPosition) {
+		this.firstPosition = isFirstPosition;
+	}
+
+	public bool getFirstPosition() {
+		return this.firstPosition;
+	}
+
     private void FixedUpdate() {
         //rgd.AddForce((movementDirection + Vector3.forward) * CarManager.advanceSpeed * Time.fixedDeltaTime);
         transform.position += ((movementDirection * CarManager.movementSpeed) + (Vector3.forward * CarManager.forwardSpeed)) * Time.fixedDeltaTime;
         movementDirection = Vector3.zero;
     }
+
+	void OnCollisionEnter(Collision other) {
+		Debug.Log("Collision: " + other.gameObject.tag);
+		if (other.gameObject.CompareTag ("Item")) {
+			other.gameObject.SetActive (false);
+			if (this.getFirstPosition()) {
+				ScoreManager.addItem ();
+			}
+		}
+	}
 }
