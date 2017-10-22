@@ -6,7 +6,7 @@ public class ScoreManager : MonoBehaviour {
     public static bool game;
     public int pointsPerSecond;
 
-    private int score;
+	public static int score;
 
 	private static int items;
 	// Use this for initialization
