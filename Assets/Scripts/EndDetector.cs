@@ -17,6 +17,7 @@ public class EndDetector : MonoBehaviour {
         Debug.Log("tag: " + other.tag);
         if (other.CompareTag("Player")) {
             if (other.GetComponent<CarController>().playerNumber.Equals(PLAYER_NUMBER.TWO)) {
+                Debug.Log("GENERAR");
                 boxGenerator.generar();
                 treeGenerator.generar();
             }
