@@ -6,12 +6,19 @@ public class CarObjectManager : MonoBehaviour {
     public Transform objectTransform;
     public GameObject objectPrefab;
 
-
 	public bool IsObjectReady() {
-        return false;
+		return objectPrefab != null;
     }
 
     public void ReleaseObject() {
-        Instantiate(objectPrefab, objectTransform.position, Quaternion.identity);
+		this.crearArma ();
     }
+
+	private void crearArma() {
+		if (ScoreManager.canCreateArma ()) {
+			ScoreManager.resetItem ();
+			GameObject e = (GameObject)Instantiate (objectPrefab);
+			e.transform.position = this.objectTransform.position;
+		}
+	}
 }

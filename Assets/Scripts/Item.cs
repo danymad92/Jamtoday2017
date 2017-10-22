@@ -34,15 +34,11 @@ public class Item : MonoBehaviour, IPooleableObject {
 		Destroy(this.gameObject);
 	}
 
-	void OnCollisionEnter(Collision other) {
-
-	}
-
     void OnTriggerEnter(Collider other) {
         Debug.Log(other.gameObject.name);
         if (other.CompareTag("EnemyDesactive")) {
 			Items.items.Release(this);
             this.gameObject.SetActive(false);
-        }
+		}
     }
 }
