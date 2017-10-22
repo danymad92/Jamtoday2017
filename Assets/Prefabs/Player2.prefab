@@ -456,7 +456,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1932921358664702}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.6183255, y: 0.191, z: 4.994261}
+  m_LocalPosition: {x: 1.6183255, y: 0.191, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4710612821877494}
@@ -622,7 +622,7 @@ Camera:
     width: 0.5
     height: 1
   near clip plane: 0.3
-  far clip plane: 300
+  far clip plane: 38
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -1011,7 +1011,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f227131d00a18ef4c93891e8f8bdb9da, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 11e7aa6f5a1347f47b87aa7b91b15b1c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1069,7 +1069,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1361,6 +1361,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNumber: 1
+  firstPosition: 0
   shootSound: {fileID: 82488198888685372}
   animator: {fileID: 95460252504033128}
 --- !u!114 &114767955314041744
@@ -1426,7 +1427,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1904069447919466}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 76b5ec6153a1d55438228df10fe66844, type: 3}
   m_Name: 
