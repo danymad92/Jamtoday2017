@@ -957,7 +957,7 @@ Prefab:
     - target: {fileID: 114376481546746230, guid: 4346a678749520149822e9847f8ac29e,
         type: 2}
       propertyPath: materials.Array.size
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4885095644616978, guid: 4346a678749520149822e9847f8ac29e, type: 2}
       propertyPath: m_LocalPosition.x
@@ -1011,6 +1011,11 @@ Prefab:
       propertyPath: materials.Array.data[14]
       value: 
       objectReference: {fileID: 2100000, guid: 8a61a31da122a454d94aac8c1f8edab5, type: 2}
+    - target: {fileID: 114376481546746230, guid: 4346a678749520149822e9847f8ac29e,
+        type: 2}
+      propertyPath: materials.Array.data[15]
+      value: 
+      objectReference: {fileID: 2100000, guid: 46a9884871785f74b9fe2276ed172eaa, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4346a678749520149822e9847f8ac29e, type: 2}
   m_IsPrefabParent: 0
@@ -2899,7 +2904,7 @@ Light:
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
