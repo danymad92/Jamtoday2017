@@ -32,6 +32,7 @@ public class PauseController : MonoBehaviour {
             _isPaused = false;
             gameObject.SetActive(false);
         } else {
+            Debug.Log("Pausado");
             Time.timeScale = 0;
             _isPaused = true;
             gameObject.SetActive(true);

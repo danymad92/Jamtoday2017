@@ -243,6 +243,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4446152120872264}
   - component: {fileID: 65424939158862806}
+  - component: {fileID: 114133984715497998}
   m_Layer: 0
   m_Name: EnemyDesactive
   m_TagString: EnemyDesactive
@@ -837,7 +838,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f227131d00a18ef4c93891e8f8bdb9da, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 11e7aa6f5a1347f47b87aa7b91b15b1c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -952,6 +953,17 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114133984715497998
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1701279805695912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e00f8be494c1d714594d51fb7c7e0a26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114143173736378920
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1003,7 +1015,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectTransform: {fileID: 4041923907773294}
-  objectPrefab: {fileID: 1145774025549392, guid: 19d1f7771eb40d74484b6691633c944e,
+  objectPrefab: {fileID: 1728619453497436, guid: e7152d23c09aee845a9594ff1308f6a8,
     type: 2}
 --- !u!114 &114333193296597774
 MonoBehaviour:
@@ -1314,6 +1326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNumber: 0
+  firstPosition: 1
   shootSound: {fileID: 82871555202671544}
   animator: {fileID: 95580632744441376}
 --- !u!124 &124225735220057028

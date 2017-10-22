@@ -9,6 +9,7 @@ public class InputManager : MonoBehaviour {
     public CurvesController curves;
 
     private void Start() {
+        Time.timeScale = 1;
         curves.EnableCurves();
     }
 

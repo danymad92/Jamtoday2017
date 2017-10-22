@@ -122,12 +122,12 @@ Prefab:
     - target: {fileID: 224859207824944986, guid: c2aa0e0a58cdb3a4393a2c5ce9f2ed14,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 220
+      value: 334
       objectReference: {fileID: 0}
     - target: {fileID: 224859207824944986, guid: c2aa0e0a58cdb3a4393a2c5ce9f2ed14,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 137.5
+      value: 188
       objectReference: {fileID: 0}
     - target: {fileID: 224859207824944986, guid: c2aa0e0a58cdb3a4393a2c5ce9f2ed14,
         type: 2}
@@ -212,6 +212,27 @@ Prefab:
     - target: {fileID: 1153912780697160, guid: c2aa0e0a58cdb3a4393a2c5ce9f2ed14, type: 2}
       propertyPath: m_Name
       value: MainMenuCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 114338108191141804, guid: c2aa0e0a58cdb3a4393a2c5ce9f2ed14,
+        type: 2}
+      propertyPath: m_Text
+      value: RUN TO THE HILL
+      objectReference: {fileID: 0}
+    - target: {fileID: 114338108191141804, guid: c2aa0e0a58cdb3a4393a2c5ce9f2ed14,
+        type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 08211fafce7b7d74791e127d2f72213e,
+        type: 3}
+    - target: {fileID: 114338108191141804, guid: c2aa0e0a58cdb3a4393a2c5ce9f2ed14,
+        type: 2}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114586259964511146, guid: c2aa0e0a58cdb3a4393a2c5ce9f2ed14,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 0.641
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c2aa0e0a58cdb3a4393a2c5ce9f2ed14, type: 2}

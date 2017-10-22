@@ -1096,7 +1096,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4201011694221510}
   - component: {fileID: 65804123368337938}
-  - component: {fileID: 114570156197769770}
   m_Layer: 0
   m_Name: EndDetector
   m_TagString: Untagged
@@ -1632,7 +1631,6 @@ GameObject:
   - component: {fileID: 33843122527002278}
   - component: {fileID: 23471329562087320}
   - component: {fileID: 65971156138881880}
-  - component: {fileID: 114265199535407240}
   m_Layer: 0
   m_Name: Hurdle01 (1)
   m_TagString: Enemy
@@ -1732,7 +1730,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4364616783064484}
   - component: {fileID: 65349550850220032}
-  - component: {fileID: 114696842314146394}
   m_Layer: 0
   m_Name: EndDetector
   m_TagString: Untagged
@@ -2459,7 +2456,6 @@ GameObject:
   - component: {fileID: 4153223027280036}
   - component: {fileID: 33875339410174528}
   - component: {fileID: 23775744327027830}
-  - component: {fileID: 114322702931628938}
   - component: {fileID: 65915349652245490}
   - component: {fileID: 114887862006871036}
   m_Layer: 0
@@ -2695,7 +2691,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4041515671545642}
   - component: {fileID: 65880798710688142}
-  - component: {fileID: 114276743972789978}
   m_Layer: 0
   m_Name: EndDetector
   m_TagString: Untagged
@@ -3399,7 +3394,6 @@ GameObject:
   - component: {fileID: 33579775229658476}
   - component: {fileID: 23738583953028438}
   - component: {fileID: 65354730819251458}
-  - component: {fileID: 114035030422255022}
   m_Layer: 0
   m_Name: Hurdle01
   m_TagString: Enemy
@@ -4823,7 +4817,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4568028611027096}
   - component: {fileID: 65867128274513460}
-  - component: {fileID: 114276192857102324}
   m_Layer: 0
   m_Name: EndDetector
   m_TagString: Untagged
@@ -5055,7 +5048,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4533303528413856}
   - component: {fileID: 65099249450516372}
-  - component: {fileID: 114701614675000022}
   m_Layer: 0
   m_Name: EndDetector
   m_TagString: Untagged
@@ -19795,109 +19787,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 6, z: 8}
   m_Center: {x: -4, y: 3, z: -4}
---- !u!114 &114035030422255022
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1610982807037648}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4c61cdc91ee5ff4badc9f3a877fc96e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obstaculos:
-  - {fileID: 4300000, guid: 400ca6311d5459244a1af9dea192449c, type: 3}
-  - {fileID: 4300000, guid: 59b81f3d4c0ea8a4a98445251826f03c, type: 3}
-  - {fileID: 4300000, guid: ac3f35dfd68bd5f4a940da4eb3ffd43b, type: 3}
-  player: {fileID: 0}
-  positionArrayEnemies: 0
---- !u!114 &114265199535407240
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1271731941589616}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4c61cdc91ee5ff4badc9f3a877fc96e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obstaculos:
-  - {fileID: 4300000, guid: 400ca6311d5459244a1af9dea192449c, type: 3}
-  - {fileID: 4300000, guid: 59b81f3d4c0ea8a4a98445251826f03c, type: 3}
-  - {fileID: 4300000, guid: ac3f35dfd68bd5f4a940da4eb3ffd43b, type: 3}
-  player: {fileID: 0}
-  positionArrayEnemies: 0
---- !u!114 &114276192857102324
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1877620717635858}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85a5a14ec89c6184092c91eb86efc751, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114276743972789978
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1461211745914512}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85a5a14ec89c6184092c91eb86efc751, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114322702931628938
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1438310061110828}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4c61cdc91ee5ff4badc9f3a877fc96e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obstaculos: []
-  player: {fileID: 0}
-  positionArrayEnemies: 0
---- !u!114 &114570156197769770
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1175482450302122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85a5a14ec89c6184092c91eb86efc751, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114696842314146394
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1284927756993644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85a5a14ec89c6184092c91eb86efc751, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114701614675000022
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1921157947068666}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85a5a14ec89c6184092c91eb86efc751, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114887862006871036
 MonoBehaviour:
   m_ObjectHideFlags: 1
