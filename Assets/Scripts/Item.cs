@@ -16,6 +16,11 @@ public class Item : MonoBehaviour, IPooleableObject {
 		int value = Random.Range (0, items.Length);
 		this.GetComponent<MeshFilter>().mesh = items[value];
 		this.GetComponent<MeshRenderer>().material = materials[value];
+		switch (value) {
+		case 0: 
+			transform.localScale = new Vector3 (3f, 3f, 3f);
+			break;
+		}
 		//this.gameObject = obstaculos[Random.Range(0, obstaculos.Length)];
 	}
 
