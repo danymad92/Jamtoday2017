@@ -9,6 +9,7 @@ TagManager:
   - Barrel
   - Item
   - Tree
+  - Weapon
   layers:
   - Default
   - TransparentFX

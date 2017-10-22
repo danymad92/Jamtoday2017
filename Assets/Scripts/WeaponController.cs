@@ -42,7 +42,7 @@ public class WeaponController : MonoBehaviour {
         shootedBulletsCnt = 0;
     }
 
-    public void Shoot() {
+    public bool Shoot() {
         if (available) {
 
             bulletShooted = bullets.Take();
@@ -61,5 +61,7 @@ public class WeaponController : MonoBehaviour {
                 shootedBulletsCnt = 0;
             }
         }
+
+		return available;
     }
 }

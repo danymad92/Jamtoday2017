@@ -13,7 +13,7 @@ public class CarCanvasController : MonoBehaviour {
 	}
 
     public void ActivateTrashCount() {
-        trashCounterFill.fillAmount = 1;
+        trashCounterFill.fillAmount = 0;
         trashCounterFill.transform.parent.gameObject.SetActive(true);
     }
 
