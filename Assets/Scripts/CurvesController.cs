@@ -64,9 +64,11 @@ public class CurvesController : MonoBehaviour {
 				float newDir = maxOffsetX * dir;
 				if (offset.x + deltaCurve < newDir) {
 					offset.x += deltaCurve;
+                    offset.y -= deltaCurve;
 				} else if (offset.x - deltaCurve > newDir) {
 					offset.x -= deltaCurve;
-				}
+                    offset.y += deltaCurve;
+                }
 
 				if (Time.time - updateTime > 0.1f) {
 
