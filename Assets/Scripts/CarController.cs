@@ -35,6 +35,9 @@ public class CarController : MonoBehaviour {
 		carCanvasController.DeactivateBulletCount ();
 		carCanvasController.ActivateTrashCount ();
 		totalItem = 3;
+		if (!firstPosition) {
+			carCanvasController.DeactivateTrashCount ();
+		}
 	}
 	
     public void ReleaseObject() {
