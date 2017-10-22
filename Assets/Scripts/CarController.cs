@@ -54,7 +54,6 @@ public class CarController : MonoBehaviour {
     }
 
 	void OnCollisionEnter(Collision other) {
-		Debug.Log("Collision: " + other.gameObject.tag);
 		if (other.gameObject.CompareTag ("Item")) {
 			other.gameObject.SetActive (false);
 			if (this.getFirstPosition()) {
