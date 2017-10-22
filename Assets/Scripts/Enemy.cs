@@ -47,6 +47,7 @@ public class Enemy : MonoBehaviour, IPooleableObject {
             // TODO Mostrar menú final de partida
             SoundManager.instance.engine.Stop();
             SoundManager.instance.carHit.Play();
+			EndGameCanvasController._instance.SetActive (true);
 		}
 	}
 
