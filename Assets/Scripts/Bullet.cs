@@ -56,6 +56,12 @@ public class Bullet : MonoBehaviour, IPooleableObject {
             if (!other.gameObject.GetComponent<CarController>().playerNumber.Equals(weaponController.player.playerNumber)) {
                 gameObject.SetActive(false);
                 SoundManager.instance.player.Play();
+                Time.timeScale = 0;
+                ScoreManager.game = false;
+                // TODO Mostrar menú final de partida
+                SoundManager.instance.engine.Stop();
+                SoundManager.instance.carHit.Play();
+                EndGameCanvasController._instance.SetActive(true);
             }
         }
 
