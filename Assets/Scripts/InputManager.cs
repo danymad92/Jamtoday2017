@@ -29,7 +29,7 @@ public class InputManager : MonoBehaviour {
             // Car1 Object
             car1.ReleaseObject();
         } else if (Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.A)) {
-            Debug.Log("aaaa");
+			//Debug.Log("aaaa");
             car1.MoveTo(Vector3.zero);
         }
 

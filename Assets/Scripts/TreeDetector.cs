@@ -5,9 +5,9 @@ using UnityEngine;
 public class TreeDetector : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other) {
-        Debug.Log("tag: " + other.tag);
+		//Debug.Log("tag: " + other.tag);
         if (other.CompareTag("Tree")) {
-            Debug.Log("tree");
+			//Debug.Log("tree");
             other.gameObject.SetActive(false);
         }
 

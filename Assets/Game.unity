@@ -1249,12 +1249,12 @@ Prefab:
     - target: {fileID: 224095823946694330, guid: e92a2ea62eba9984da908ae10b820ff3,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 224
+      value: 574
       objectReference: {fileID: 0}
     - target: {fileID: 224095823946694330, guid: e92a2ea62eba9984da908ae10b820ff3,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 126
+      value: 267.5
       objectReference: {fileID: 0}
     - target: {fileID: 224095823946694330, guid: e92a2ea62eba9984da908ae10b820ff3,
         type: 2}
@@ -2862,12 +2862,12 @@ Prefab:
     - target: {fileID: 224722603735789634, guid: b0fd68727e93902459d35c6b4a5ff2f4,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 224
+      value: 574
       objectReference: {fileID: 0}
     - target: {fileID: 224722603735789634, guid: b0fd68727e93902459d35c6b4a5ff2f4,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 126
+      value: 267.5
       objectReference: {fileID: 0}
     - target: {fileID: 224722603735789634, guid: b0fd68727e93902459d35c6b4a5ff2f4,
         type: 2}
@@ -3415,7 +3415,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69aedabb2227c8f4d984adaa665f0b32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 1257406641766702, guid: a07da4fa52dcdc34ca1f076049e4ec3c, type: 2}
+  items:
+  - {fileID: 1344998906351228, guid: 241bd194efe98be4d8631e9c3477fd29, type: 2}
+  - {fileID: 1665607793709034, guid: 774aaf89e9b82da4aa330e053769b541, type: 2}
+  itemScale:
+  - {x: 1, y: 1, z: 1}
+  - {x: 3, y: 3, z: 3}
   numeroCarriles: 3
   anchoCarretera: 6
   largoTramoCarretera: 8
@@ -3564,12 +3569,12 @@ Prefab:
     - target: {fileID: 224859207824944986, guid: 2dce43f217c14f14ca20b70150959171,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 224
+      value: 574
       objectReference: {fileID: 0}
     - target: {fileID: 224859207824944986, guid: 2dce43f217c14f14ca20b70150959171,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 126
+      value: 267.5
       objectReference: {fileID: 0}
     - target: {fileID: 224859207824944986, guid: 2dce43f217c14f14ca20b70150959171,
         type: 2}

@@ -19,7 +19,7 @@ public class EndGameCanvasController : MonoBehaviour {
 	}
 
 	public void GoToLevel(string level) {
-		Debug.Log (level);
+		//Debug.Log (level);
 		Application.LoadLevel (level); 
 	}
 

@@ -6,23 +6,23 @@ using FreakPool;
 public class Item : MonoBehaviour, IPooleableObject {
 	
 	//public GameObject[] obstaculos;
-
-	public Mesh[] items;
-	public Material[] materials;
+	public int position;
+//	public Mesh[] items;
+//	public Material[] materials;
 	//public GameObject obstaculo;
 
-	void Start()
-	{
-		int value = Random.Range (0, items.Length);
-		this.GetComponent<MeshFilter>().mesh = items[value];
-		this.GetComponent<MeshRenderer>().material = materials[value];
-		switch (value) {
-		case 0: 
-			transform.localScale = new Vector3 (3f, 3f, 3f);
-			break;
-		}
-		//this.gameObject = obstaculos[Random.Range(0, obstaculos.Length)];
-	}
+//	void Start()
+//	{
+//		int value = Random.Range (0, items.Length);
+//		this.GetComponent<MeshFilter>().mesh = items[value];
+//		this.GetComponent<MeshRenderer>().material = materials[value];
+//		switch (value) {
+//		case 0: 
+//			transform.localScale = new Vector3 (3f, 3f, 3f);
+//			break;
+//		}
+//		//this.gameObject = obstaculos[Random.Range(0, obstaculos.Length)];
+//	}
 
 	/// <summary>
 	/// Generates an Item
@@ -43,7 +43,7 @@ public class Item : MonoBehaviour, IPooleableObject {
 
     void OnTriggerEnter(Collider other) {
         if (other.CompareTag("EnemyDesactive")) {
-			Items.items.Release(this);
+			Items.poolsItem[this.position].Release(this);
             this.gameObject.SetActive(false);
 		}
     }

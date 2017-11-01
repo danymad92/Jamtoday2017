@@ -7,9 +7,11 @@ public class Items : MonoBehaviour {
 
 	public static int TotalCreated;
 
-	public static Pool<Item> items;
+	public static Pool<Item>[] poolsItem;
 
-	public GameObject item;
+	public GameObject[] items;
+
+	public Vector3[] itemScale;
 
 	public static int TotalDestroyed;
 
@@ -29,32 +31,39 @@ public class Items : MonoBehaviour {
 
 	void Start()
 	{
-
 		this.anchoCarril = this.anchoCarretera / this.numeroCarriles;
-		GameObject e = (GameObject) Instantiate (this.item);
-		item.transform.position = new Vector3 (-1000, -1000, -1000);
-		items = new Pool<Item> (e.GetComponent<Item>());
-		items.SetSize (20);
+		Items.poolsItem = new Pool<Item>[this.items.Length];
+		for (int i = 0; i < items.Length; i++) {
+			GameObject e = (GameObject) Instantiate (this.items[i]);
+			items[i].transform.position = new Vector3 (-1000, -1000, -1000);
+			items[i].transform.localScale = this.itemScale [i];
+			Items.poolsItem[i] = new Pool<Item> (e.GetComponent<Item>());
+			Items.poolsItem[i].SetSize (20);
+		}
 		StartCoroutine (createItemRuntime());
-
 	}
 
 	public IEnumerator createItemRuntime() {
 		while (true) {
-			this.CreateItem ();
+			int value = Random.Range (0, this.items.Length);
+			this.CreateItem (value);
 			yield return new WaitForSeconds (3.5f);
 		}
 	}
 		
-	public void CreateItem()
+	public void CreateItem(int valuePool)
 	{
 		int carril = Random.Range (-1, 2);
+		Item item = Items.poolsItem[valuePool].Take();
+		float positiony = 0f;
+		if (item.position == 0) {
+			positiony = 0.354f;
+		}
 		Vector3 initialPosition = new Vector3(
 			carril * this.anchoCarril, 
-			0, 
+			0 + positiony, 
 			Random.Range(player.transform.position.z +30, player.transform.position.z + this.largoTramoCarretera +30));
-
-		Item item = items.Take ();
+		
 		item.gameObject.SetActive (true);
 		item.gameObject.transform.SetPositionAndRotation (initialPosition, Quaternion.Euler(new Vector3(-90, 0, 0)));
 		

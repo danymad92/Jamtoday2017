@@ -19,7 +19,7 @@ public class CurvesController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Debug.Log("Vaya dos imbeciles... Suerte capullos! :)");
+		//Debug.Log("Vaya dos imbeciles... Suerte capullos! :)");
 	}
 
 	void OnEnable () {
@@ -29,7 +29,7 @@ public class CurvesController : MonoBehaviour {
 	}
 
 	public void EnableCurves() {
-		Debug.Log ("Curves Enabled");
+		//Debug.Log ("Curves Enabled");
 		UnityEngine.Random.seed = (int)System.DateTime.Now.Ticks;
 
 		for (int i = 0; i < materials.Length; i++) {
@@ -40,7 +40,7 @@ public class CurvesController : MonoBehaviour {
 	}
 
 	public void DisableCurves() {
-		Debug.Log ("Curves Disabled");
+		//Debug.Log ("Curves Disabled");
 
 		for (int i = 0; i < materials.Length; i++) {
 			materials [i].SetVector ("_QOffset", Vector4.zero);
@@ -51,7 +51,7 @@ public class CurvesController : MonoBehaviour {
 	}
 
 	IEnumerator ChangeCurve () {
-		Debug.Log ("Change Curve");
+		//Debug.Log ("Change Curve");
 		while (true) {
 				//Si el juego está parado
 
@@ -63,11 +63,11 @@ public class CurvesController : MonoBehaviour {
 				// Update curve towards direction
 				float newDir = maxOffsetX * dir;
 				if (offset.x + deltaCurve < newDir) {
-                    Debug.Log("Abajo");
+				//Debug.Log("Abajo");
 					offset.x += deltaCurve;
                     offset.y -= deltaCurve;
 				} else if (offset.x - deltaCurve > newDir) {
-                    Debug.Log("Arriba");
+				//Debug.Log("Arriba");
                     offset.x -= deltaCurve;
                     offset.y += deltaCurve;
                     if (offset.y >= 0) {

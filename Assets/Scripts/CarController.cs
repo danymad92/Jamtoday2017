@@ -50,19 +50,19 @@ public class CarController : MonoBehaviour {
         movementDirection = direction;
 
         if (movementDirection.x < 0 && !turningLeft) {
-            Debug.Log("Left True");
+			//Debug.Log("Left True");
             animator.SetTrigger("TurnLeft");
             turningLeft = true;
             turningRight = false;
         } else if(movementDirection.x > 0 && !turningRight) {
 
-            Debug.Log("Left False 1");
+			//Debug.Log("Left False 1");
             animator.SetTrigger("TurnRight");
             turningRight = true;
             turningLeft = false;
         } else if(movementDirection.Equals(Vector3.zero)) {
 
-            Debug.Log("Left False 2");
+			//Debug.Log("Left False 2");
             turningRight = false;
             turningLeft = false;
         }

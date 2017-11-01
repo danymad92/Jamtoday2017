@@ -14,16 +14,16 @@ public class EndDetector : MonoBehaviour {
 
 
     private void OnTriggerEnter(Collider other) {
-        Debug.Log("tag: " + other.tag);
+		//Debug.Log("tag: " + other.tag);
         if (other.CompareTag("Player")) {
             if (other.GetComponent<CarController>().playerNumber.Equals(PLAYER_NUMBER.TWO)) {
-                Debug.Log("GENERAR");
+				//Debug.Log("GENERAR");
                 boxGenerator.generar();
                 treeGenerator.generar();
             }
         }
         if (other.CompareTag("Tree")) {
-            Debug.Log("tree");
+			//Debug.Log("tree");
             other.gameObject.SetActive(false);
         }
 
